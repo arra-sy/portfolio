@@ -174,13 +174,14 @@
 
 				<div id="contact-layout">
 					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<h2>Contact</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iste a labore voluptas earum vel tempore consequatur laborum</p>
+						<div id="contact-address">
+							<div class="col-md-8 col-md-offset-2">
+								<h2>Contact</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iste a labore voluptas earum vel tempore consequatur laborum</p>
+							</div>
 						</div>
 					</div>
 					<div class="row">
-						<!-- TODO : Masih perlu direvisi -->
 						<div id="contact-content">
 							<div class="col-md-4 side-contact">
 								<form>
@@ -195,59 +196,47 @@
 									</address>
 									<address>
 										<strong>AR Setiawan</strong><br>
-										<a href="mailto:#">arrasy.setiawan@gmail.com</a>
+										<a href="mailto:arrasy.setiawan@gmail.com">arrasy.setiawan@gmail.com</a>
 									</address>
-									</form>
+								</form>
 							</div>
 							<div class="col-md-8 email-field">
-								<div class="well well-sm">
-									<form>
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label for="name">
-													Name</label>
-													<input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
-												</div>
-												<div class="form-group">
-													<label for="email">
-													Email Address</label>
-													<div class="input-group">
-														<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-													</span>
-													<input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
-												</div>
-												<div class="form-group">
-													<label for="subject">
-													Subject</label>
-													<select id="subject" name="subject" class="form-control" required="required">
-														<option value="na" selected="">Choose One:</option>
-														<option value="service">General Customer Service</option>
-														<option value="suggestions">Suggestions</option>
-														<option value="product">Product Support</option>
-													</select>
-												</div>
+								<form>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="name">
+												Name</label>
+												<input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
 											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label for="name">
-													Message</label>
-													<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-													placeholder="Message"></textarea>
-												</div>
+											<div class="form-group">
+												<label for="subject">
+												Subject</label>
+												<input type="text" class="form-control" id="subject" placeholder="Enter subject" required="required" />
 											</div>
-											<div class="col-md-12">
-												<button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-												Send Message</button>
+											<div class="form-group">
+												<label for="email">
+												Email Address</label>
+												<input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
 											</div>
 										</div>
-									</form>
-								</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="message">
+												Message</label>
+												<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+												placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+											Send Message</button>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
-					<!-- TODO : Layout Contact berisi input nama, email, komentar -->
-					<!-- TODO : Responsive input layout -->
 				</div>
 			</main>
 			<!-- Main end -->
@@ -265,6 +254,49 @@
 					</div>
 				</div>
 			</div> -->
+			<div class="row">
+				<!-- TODO: list jadikan landscape, warna font dll-->
+				<div id="social-media">
+					<ul>
+						<!-- TODO: Hover ke putih dari setiap logo -->
+						<li>
+							<span class="fa fa-facebook"></span>
+						</li>
+						<li>
+							<span class="fa fa-instagram"></span>
+						</li>
+						<li>
+							<span class="fa fa-github"></span>
+						</li>
+						<li>
+							<span class="fa fa-codepen"></span>
+						</li>
+
+
+					</ul>
+				</div>
+				<div id="menu-shortcut">
+					<ul>
+						<!-- TODO: Hover & Styling menu footer-->
+						<li>
+							Home
+						</li>
+						<li>
+							About
+						</li>
+						<li>
+							Gallery
+						</li>
+						<li>
+							Contact
+						</li>
+					</ul>
+				</div>
+				<div id="copyright">
+					<!-- TODO: Styling dll -->
+					<p>&copy 1437H - AR Setiawan</p>
+				</div>
+			</div>
 		</footer>
 		<!-- Footer end -->
 		<script src="js/jquery.min.js"></script>

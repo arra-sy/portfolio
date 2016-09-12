@@ -233,6 +233,7 @@ body {
 
 #contact-layout {
     background-color: #01baef;
+    color: #fbfbff;
 }
 
 #contact-layout>.row {
@@ -257,20 +258,80 @@ body {
   line-height: 3em;
 }
 
+#contact-layout legend {
+  color: #fbfbff;
+}
+
 #contact-content {
   max-width: 1024px;
   width: 95%;
   margin: 0 auto;
 }
 
-.side-contact {
-  border: 1px solid #BBBBBB;
+.side-contact a{
+  text-decoration: none;
+  color: #fbfbff;
+}
+
+.side-contact a:hover{
+  color: #0b4f6c;
 }
 
 .email-field {
-  background-color: green;
+  margin-bottom: 35px;
 }
 
+.email-field input{
+  color:white;
+  background-color: rgba(0,95,169, 0.3);
+}
+
+.email-field input:focus{
+  color:white;
+  border-color: white;
+}
+
+.email-field textarea{
+  color:white;
+  background-color: rgba(0,95,169, 0.3);
+}
+
+.email-field textarea:focus{
+  color:white;
+  border-color: white;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.77);
+}
+
+.form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.77);
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.77);
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.77);
+}
+
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+footer>.row {
+  max-width: 1024px; 
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #20BF55;
+}
 
 /*****************************************************************************************************************************/
 /* Responsive Gadget Layout */
