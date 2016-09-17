@@ -22,14 +22,15 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" id="logo" href="#">ARS</a>
+							<a class="navbar-brand" id="logo" href="">ARS</a>
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right" id="menu-item">
-								<li><a href="#">Home</a></li>
+								<li><a href="#home-layout">Home</a></li>
 								<li><a href="#about-layout">About</a></li>
 								<li><a href="#gallery-layout">Gallery</a></li>
 								<li><a href="#contact-layout">Contact</a></li>
+								<li><a href="#socmed">Link</a></li>
 							</ul>
 						</div><!--/.nav-collapse -->
 					</div>
@@ -242,7 +243,7 @@
 			<!-- Main end -->
 		</div>
 		<!-- Footer start -->
-		<footer>
+		<footer id="socmed">
 			<!-- TODO : Desain footer dengan konsep sticky footer -->
 			<!-- <div class="container">
 				<div class="navbar navbar-default navbar-fixed-bottom">
@@ -254,55 +255,62 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="row">
-				<!-- TODO: list jadikan landscape, warna font dll-->
-				<div id="social-media">
-					<ul>
-						<!-- TODO: Hover ke putih dari setiap logo -->
-						<li>
-							<span class="fa fa-facebook"></span>
-						</li>
-						<li>
-							<span class="fa fa-instagram"></span>
-						</li>
-						<li>
-							<span class="fa fa-github"></span>
-						</li>
-						<li>
-							<span class="fa fa-codepen"></span>
-						</li>
-
-
-					</ul>
-				</div>
-				<div id="menu-shortcut">
-					<ul>
+			<div class="container">
+				<div class="row">
+					<!-- TODO: hover.css -->
+					<div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" id="social-media">
+						<a href="https://facebook.com/AR0Setiawan"><i class="hi-icon fa fa-facebook"></i></a>
+						<a href="https://www.instagram.com/ar_setiawan/"><i class="hi-icon fa fa-instagram"></i></a>
+						<a href="github.com/arra-sy"><i class="hi-icon fa fa-github"></i></a>
+						<a href="http://codepen.io/ar_setiawan/"><i class="hi-icon fa fa-codepen"></i></a>
+						<!-- <ul class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+							TODO: Hover ke putih dari setiap logo
+							<li>
+								<i class="hi-icon fa fa-facebook"><a href="https://facebook.com/AR0Setiawan"></a></i>
+							</li>
+							<li>
+								<i class="hi-icon fa fa-instagram"><a href="https://www.instagram.com/ar_setiawan/"></a></i>
+							</li>
+							<li>
+								<i class="hi-icon fa fa-github"><a href="github.com/arra-sy"></a></i>
+							</li>
+							<li>
+								<i class="hi-icon fa fa-codepen"><a href="http://codepen.io/ar_setiawan/"></a></i>
+							</li>
+						</ul> -->
+					</div>
+					<div id="menu-shortcut">
 						<!-- TODO: Hover & Styling menu footer-->
-						<li>
-							Home
-						</li>
-						<li>
-							About
-						</li>
-						<li>
-							Gallery
-						</li>
-						<li>
-							Contact
-						</li>
-					</ul>
+						<ul>
+							<li>
+								<a href="#home-layout">Home</a>
+							</li>
+							<li>
+								<a href="#about-layout">About</a>
+							</li>
+							<li>
+								<a href="#gallery-layout">Gallery</a>
+							</li>
+							<li>
+								<a href="#contact-layout">Contact</a>
+							</li>
+							<li>
+								<a href="#socmed">Link</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div id="copyright">
-					<!-- TODO: Styling dll -->
-					<p>&copy 1437H - AR Setiawan</p>
-				</div>
+			</div>
+			<div id="copyright">
+				<!-- TODO: Styling dll -->
+				<p>&copy 1437H - AR Setiawan</p>
 			</div>
 		</footer>
 		<!-- Footer end -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/lightbox.min.js"></script>
-		<script src="js/smoothscroll.js"></script>
+		<script src="js/jquery.smooth-scroll.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

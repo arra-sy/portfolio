@@ -19,7 +19,10 @@ Todo 3:
  ✔ Set it contact input to responsive (konten) @done (16-09-12 18:38)
 
  Todo 5:
- ☐ Browse konsep sticky footer
- ☐ Layout disesuaikan dengan link yang ada
- ☐ Pemilihan warna & ui lainnya
- ☐ Set it footer to responsive
+ ✔ Browse konsep sticky footer @done (16-09-14 14:20)
+ ✔ Layout disesuaikan hover icon dari link http://webdesignandsuch.com/ss3-circle-hover-effects-for-font-awesome-icons/ @done (16-09-17 15:32)
+ ✔ Navigasi footer @done (16-09-17 15:32)
+ ✔ Set it footer to responsive(Desktop Only) @done (16-09-18 02:48)
+
+  Todo 6:
+ ✔ Smoothscroll @done (16-09-18 03:21)

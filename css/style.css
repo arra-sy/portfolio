@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'fontawesome';
+  src:url('../fonts/fontawesome-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background: #fbfbff;
 }
@@ -29,12 +36,13 @@ body {
   font-weight: 800;
 }
 
-#menu-item li a {
+#menu-item li>a {
   color: #FFFFFF;
   font-weight: 800;
 }
 
-#menu-item li a:hover {
+#menu-item li>a:hover {
+  /* TODO: beri efek underline reveal; */
   color: #20bf55;
   border-bottom: 3px solid #20bf55;
 }
@@ -57,7 +65,7 @@ body {
   max-width: 1024px;
   width: 100%;
   background-color: #0090ff;
-  position: relative;/*   margin: 50px auto 0 auto; */
+  position: relative;
 }
 
 #home-content .caption {
@@ -165,7 +173,7 @@ body {
   line-height: 3em;
 }
 
-#gallery-layout a {
+#gallery-layout>a {
   text-decoration: none;
 }
 
@@ -268,12 +276,12 @@ body {
   margin: 0 auto;
 }
 
-.side-contact a{
+.side-contact>a{
   text-decoration: none;
   color: #fbfbff;
 }
 
-.side-contact a:hover{
+.side-contact>a:hover{
   color: #0b4f6c;
 }
 
@@ -281,22 +289,16 @@ body {
   margin-bottom: 35px;
 }
 
-.email-field input{
-  color:white;
-  background-color: rgba(0,95,169, 0.3);
+.email-field input,
+.email-field textarea {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  color: white;
+  background-color: rgba(0, 95, 169, 0.3);
 }
 
-.email-field input:focus{
-  color:white;
-  border-color: white;
-}
-
-.email-field textarea{
-  color:white;
-  background-color: rgba(0,95,169, 0.3);
-}
-
-.email-field textarea:focus{
+.email-field input:focus, .email-field textarea:focus{
   color:white;
   border-color: white;
 }
@@ -319,18 +321,153 @@ body {
   color: rgba(255, 255, 255, 0.77);
 }
 
-* {
-  -webkit-border-radius: 0 !important;
-     -moz-border-radius: 0 !important;
-          border-radius: 0 !important;
+footer {
+  background-color: #20BF55;
 }
 
-footer>.row {
-  max-width: 1024px; 
-  width: 100%;
+footer .row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+footer>#socmed {
+  margin-top: 50px;
+}
+
+#social-media {
+  max-width: 1024px;
+  width: 95%;
   margin: 0 auto;
   text-align: center;
-  background-color: #20BF55;
+  padding: 20px 0 0 0;
+}
+
+/* Hover untuk css */
+.hi-icon-wrap {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em 0 3em;
+}
+
+.hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 15px 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hi-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box; 
+  -moz-box-sizing: content-box; 
+  box-sizing: content-box;
+}
+
+.hi-icon:before {
+  font-family: 'fontawesome';
+  speak: none;
+  font-size: 48px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Effect 1 */
+.hi-icon-effect-1 .hi-icon {
+  background: rgba(255,255,255,0.1);
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hi-icon-effect-1 .hi-icon:after {
+  top: -7px;
+  left: -7px;
+  padding: 7px;
+  box-shadow: 0 0 0 4px #fff;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -webkit-transform: scale(.8);
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(.8);
+  opacity: 0;
+}
+
+/* Effect 1a */
+.hi-icon-effect-1a .hi-icon:hover {
+  background: rgba(255,255,255,1);
+  color: #20BF55;
+}
+
+.hi-icon-effect-1a .hi-icon:hover:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* xxxxxxxxxxxxxxx */
+
+#menu-shortcut {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+#menu-shortcut ul{
+  padding: 20px 0 20px 0;
+  margin: 0;
+}
+
+#menu-shortcut ul li {
+  padding: 0px 10px 0 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+#menu-shortcut ul li>a{
+  color: #fbfbff;
+  text-decoration: none;
+}
+
+#menu-shortcut ul li>a:hover {
+ color: #005fa9;
+}
+
+#copyright {
+  background-color: #005fa9;
+  width: 100%;
+  text-align: center;
+  margin:  0 auto;
+  padding: 15px 0px 15px 0;
+}
+
+#copyright p {
+  font-weight: 800;
+  color: #fbfbff;
+  margin: 0;
 }
 
 /*****************************************************************************************************************************/
@@ -370,10 +507,424 @@ footer>.row {
   }
 }
 
-@media(max-width: 479px){
-  .about-point {
-    padding: 0px;
+ @media(max-width: 643px){
+  .hi-icon-wrap {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em 0 3em;
   }
+
+  .hi-icon {
+    display: inline-block;
+    font-size: 0px;
+    cursor: pointer;
+    margin: 10px 25px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .hi-icon:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+  }
+
+  .hi-icon:before {
+    font-family: 'fontawesome';
+    speak: none;
+    font-size: 48px;
+    line-height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  Effect 1
+  .hi-icon-effect-1 .hi-icon {
+    background: rgba(255,255,255,0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .hi-icon-effect-1 .hi-icon:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  Effect 1a
+  .hi-icon-effect-1a .hi-icon:hover {
+    background: rgba(255,255,255,1);
+    color: #20BF55;
+  }
+
+  .hi-icon-effect-1a .hi-icon:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media(max-width: 601px){
+  .hi-icon-wrap {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em 0 3em;
+  }
+
+  .hi-icon {
+    display: inline-block;
+    font-size: 0px;
+    cursor: pointer;
+    margin: 5px 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .hi-icon:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+  }
+
+  .hi-icon:before {
+    font-family: 'fontawesome';
+    speak: none;
+    font-size: 48px;
+    line-height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  Effect 1
+  .hi-icon-effect-1 .hi-icon {
+    background: rgba(255,255,255,0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .hi-icon-effect-1 .hi-icon:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  Effect 1a
+  .hi-icon-effect-1a .hi-icon:hover {
+    background: rgba(255,255,255,1);
+    color: #20BF55;
+  }
+
+  .hi-icon-effect-1a .hi-icon:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media(max-width: 559px){
+  .hi-icon-wrap {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em 0 3em;
+  }
+
+  .hi-icon {
+    display: inline-block;
+    font-size: 0px;
+    cursor: pointer;
+    margin: 5px 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .hi-icon:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+  }
+
+  .hi-icon:before {
+    font-family: 'fontawesome';
+    speak: none;
+    font-size: 48px;
+    line-height: 80px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  Effect 1
+  .hi-icon-effect-1 .hi-icon {
+    background: rgba(255,255,255,0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .hi-icon-effect-1 .hi-icon:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  Effect 1a
+  .hi-icon-effect-1a .hi-icon:hover {
+    background: rgba(255,255,255,1);
+    color: #20BF55;
+  }
+
+  .hi-icon-effect-1a .hi-icon:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media(max-width: 517px){
+  .hi-icon-wrap {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em 0 3em;
+  }
+
+  .hi-icon {
+    display: inline-block;
+    font-size: 0px;
+    cursor: pointer;
+    margin: 5px 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .hi-icon:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+  }
+
+  .hi-icon:before {
+    font-family: 'fontawesome';
+    speak: none;
+    font-size: 40px;
+    line-height: 70px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  Effect 1
+  .hi-icon-effect-1 .hi-icon {
+    background: rgba(255,255,255,0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .hi-icon-effect-1 .hi-icon:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  Effect 1a
+  .hi-icon-effect-1a .hi-icon:hover {
+    background: rgba(255,255,255,1);
+    color: #20BF55;
+  }
+
+  .hi-icon-effect-1a .hi-icon:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media(max-width: 475px){
+  .hi-icon-wrap {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em 0 3em;
+}
+
+.hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 15px 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hi-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box; 
+  -moz-box-sizing: content-box; 
+  box-sizing: content-box;
+}
+
+.hi-icon:before {
+  font-family: 'fontawesome';
+  speak: none;
+  font-size: 48px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Effect 1 */
+.hi-icon-effect-1 .hi-icon {
+  background: rgba(255,255,255,0.1);
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hi-icon-effect-1 .hi-icon:after {
+  top: -7px;
+  left: -7px;
+  padding: 7px;
+  box-shadow: 0 0 0 4px #fff;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -webkit-transform: scale(.8);
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(.8);
+  opacity: 0;
+}
+
+/* Effect 1a */
+.hi-icon-effect-1a .hi-icon:hover {
+  background: rgba(255,255,255,1);
+  color: #20BF55;
+}
+
+.hi-icon-effect-1a .hi-icon:hover:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
 }
 
 @media(max-width:446px) {
@@ -441,7 +992,6 @@ footer>.row {
     color: white;
   }
 }
-
 
 @media(max-width:414px) {
   .navbar > #menu-layout {
